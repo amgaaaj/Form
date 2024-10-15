@@ -73,7 +73,9 @@ export default function Login() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Хэрэглэгчийн нэр:</FormLabel>
+                <FormLabel>
+                  {role === "user" ? "Хэрэглэгчийн нэр:" : "Админ нэр:"}
+                </FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
